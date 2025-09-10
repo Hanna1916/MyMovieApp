@@ -1,0 +1,86 @@
+.footer-outer-container {
+width: 70%;  
+ background-color: #141414;
+  /* display: flex; */
+  justify-content: center;
+  padding: 40px 20px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif; /* Only Footer uses Roboto */
+  color: #808080;
+  font-size: 14px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-links li:hover {
+  color: #e5e5e5; /* lighter on hover */
+}
+
+.footer-text {
+  text-align: center;
+  color: #808080;
+  font-size: 12px;
+}
+.footer-icons {
+  display: flex;
+  /* justify-content: center; */
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-icon {
+  color: #808080;
+  font-size: 30px !important; /* MUI icons need !important to override */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #e5e5e5;
+}
+/* Tablet: 2 columns */
+@media (max-width: 900px) {
+  .footer-inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 600px) {
+  .footer-outer-container {
+    width: 95%; /* take more space on small screens */
+    padding: 20px 10px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    row-gap: 10px; /* reduce spacing between stacked lists */
+  }
+
+  .footer-icons {
+    justify-content: center; /* center icons on mobile */
+    margin-bottom: 15px;
+  }
+
+  .footer-text {
+    font-size: 10px;
+  }
+}
